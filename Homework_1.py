@@ -1,5 +1,5 @@
-# Name:
-# SBUID: 
+# Name: Junbum Ko
+# SBUID: 115935594
 
 # Remove the ellipses (...) when writing your solutions.
 
@@ -8,39 +8,57 @@
 # TODO: Complete the implementation of fahrenheit2celsius () and what_to_wear(). 
 
 def fahrenheit2celsius(fahrenheit): 
-   ...
+   fahrenheit = float(input("Type the temperature in degree farenheit: "))
+   celsius = (fahrenheit - 32) * 5 / 9
+   return celsius
 
 def what_to_wear(celsius):
-   ...
+    if celsius < -10:
+        print("Puffy jacket")
+        return "Puffy_jacket"
+    elif celsius >= -10 and celsius < 0:
+        print("Scarf")
+        return "Scarf"
+    elif celsius >= 0 and celsius < 10:
+        print("Sweater")
+        return "Sweater"
+    elif celsius >= 10 and celsius < 20:
+        print("Light jacket")
+        return "Light jacket"
+    else:
+        print("T-shirt")
+        return "T-shirt"
 
+       
 # ---------------------------- Exercise II --------------------------------------
 # ----------------- Area and perimeter of a triangle  ---------------------------
 # TODO: Fill the functions shoelace_triangle_area, euclidean_distance and
 # compute_triangle_perimeter from scratch  
 
 def shoelace_triangle_area(x1, y1, x2, y2, x3, y3):
-    ...
+    return abs(((x1*y2 + x2*y3 + x3*y1)-(x1*y3 + x2*y1 + x3*y2))/ 2)
 
 def euclidean_distance(x1, y1, x2, y2):
-    ...
+    return ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 1/2
 
 def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
-    ...
+    return (((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 1/2) + (((x2 - x3) ** 2 + (y2 - y3) ** 2) ** 1/2) + (((x3 - x1) ** 2 + (y3 - y1) ** 2) ** 1/2)
 
 
 # ---------------------------- Exercise III -------------------------------------
 # ----------------- Compute the area of a regular polygon -----------------------
 # TODO: Fill the functions deg2rad, apothem  and polygon_area 
 
+import math
 
 def deg2rad(deg):
-    ...
-
+    return int(deg) * math.pi / 180
+    
 def apothem(number_sides, length_side):
-   ...
+    return int(length_side) / 2 * math.tan(180/int(number_sides))
 
 def polygon_area(number_sides, length_side):
-   ...
+    return int(number_sides) * int(length_side) * int(apothem(number_sides, length_side)) / 2
 
 
 # ---------------------------- Test -------------------------------------
