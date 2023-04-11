@@ -1,6 +1,8 @@
 # Name: Junbum Ko
 # SBUID: 115935594
-
+##################### SCORE ######################
+####### Score:  5/10
+#################################################
 # Remove the ellipses (...) when writing your solutions.
 
 # ---------------------------- Exercise I ---------------------------------------
@@ -39,10 +41,10 @@ def shoelace_triangle_area(x1, y1, x2, y2, x3, y3):
     return abs(((x1*y2 + x2*y3 + x3*y1)-(x1*y3 + x2*y1 + x3*y2))/ 2)
 
 def euclidean_distance(x1, y1, x2, y2):
-    return ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 1/2
+    return ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 1/2  # refrain from returning the entire equation as is
 
 def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
-    return (((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 1/2) + (((x2 - x3) ** 2 + (y2 - y3) ** 2) ** 1/2) + (((x3 - x1) ** 2 + (y3 - y1) ** 2) ** 1/2)
+    return (((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 1/2) + (((x2 - x3) ** 2 + (y2 - y3) ** 2) ** 1/2) + (((x3 - x1) ** 2 + (y3 - y1) ** 2) ** 1/2)  # you have aldready defined euclidean_distance() that could be used to calculate parameter--> instead you put everything in the return statement -> its not a good programming practice and most of the time you will end up with the wrong output
 
 
 # ---------------------------- Exercise III -------------------------------------
@@ -55,7 +57,7 @@ def deg2rad(deg):
     return int(deg) * math.pi / 180
     
 def apothem(number_sides, length_side):
-    return int(length_side) / 2 * math.tan(180/int(number_sides))
+    return int(length_side) / 2 * math.tan(180/int(number_sides))   # Mistake here-> Instead of having entire equation as a return statement, you could break down the problem into variables and functions-> you could use deg2rad function to get apothem
 
 def polygon_area(number_sides, length_side):
     return int(number_sides) * int(length_side) * int(apothem(number_sides, length_side)) / 2
