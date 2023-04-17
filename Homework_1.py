@@ -1,7 +1,7 @@
 # Name: Junbum Ko
 # SBUID: 115935594
 ##################### SCORE ######################
-####### Score:  5/10
+####### Score:  8/10
 #################################################
 # Remove the ellipses (...) when writing your solutions.
 
